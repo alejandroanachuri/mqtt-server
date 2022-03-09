@@ -1,13 +1,12 @@
 from fastapi import FastAPI
 from fastapi_mqtt import FastMQTT, MQQTConfig
-import logging
+#import logging
 import ssl
 
 
 app = FastAPI()
-log = logging.getLogger("app")
-log.setLevel(logging.DEBUG)
 
+'''
 sslSettings = ssl.SSLContext(ssl.PROTOCOL_TLS);
 sslSettings.verify_mode = ssl.CERT_NONE;
 
@@ -45,6 +44,7 @@ def disconnect(client, packet, exc=None):
 def subscribe(client, mid, qos, properties):
     print("subscribed", client, mid, qos, properties)
 
+'''
 
 @app.get("/")
 async def func():
