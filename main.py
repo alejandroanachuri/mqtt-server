@@ -6,7 +6,7 @@ import ssl
 
 app = FastAPI()
 
-'''
+
 sslSettings = ssl.SSLContext(ssl.PROTOCOL_TLS);
 sslSettings.verify_mode = ssl.CERT_NONE;
 
@@ -44,7 +44,7 @@ def disconnect(client, packet, exc=None):
 def subscribe(client, mid, qos, properties):
     print("subscribed", client, mid, qos, properties)
 
-'''
+
 
 @app.get("/")
 async def func():
