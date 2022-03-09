@@ -29,7 +29,6 @@ mqtt.init_app(app)
 
 @mqtt.on_connect()
 def connect(client, flags, rc, properties):
-    print("rc: ")
     mqtt.client.subscribe("/mqtt") #subscribing mqtt topic 
     print("Connected: ", client, flags, rc, properties)
 
@@ -49,6 +48,6 @@ def subscribe(client, mid, qos, properties):
 
 @app.get("/")
 async def func():
-    mqtt.publish("/mqtt", "Hello from Fastapi") #publishing mqtt topic 
+    #mqtt.publish("/mqtt", "Hello from Fastapi") #publishing mqtt topic 
 
     return {"result": True,"message":"Published" }
