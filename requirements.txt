@@ -3,6 +3,8 @@ certifi==2021.5.30
 click==8.0.1
 colorama==0.4.4
 fastapi==0.68.1
+fastapi-mqtt==0.4.0
+gmqtt==0.6.11
 greenlet==1.1.1
 gunicorn==20.1.0
 h11==0.12.0
